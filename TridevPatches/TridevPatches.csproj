@@ -32,72 +32,352 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\..\RoR2DLLs\Assembly-CSharp.dll</HintPath>
-        </Reference>
-        <Reference Include="HOOKS_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>B:\Steam\steamapps\common\Risk of Rain 2\mods\libraries\HOOKS_Assembly-CSharp.dll</HintPath>
-        </Reference>
-        <Reference Include="Mono.Cecil, Version=0.10.3.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e">
-          <HintPath>..\..\..\packages\Mono.Cecil.0.10.3\lib\net40\Mono.Cecil.dll</HintPath>
-          <Private>True</Private>
-        </Reference>
-        <Reference Include="Mono.Cecil.Mdb, Version=0.10.3.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e">
-          <HintPath>..\..\..\packages\Mono.Cecil.0.10.3\lib\net40\Mono.Cecil.Mdb.dll</HintPath>
-          <Private>True</Private>
-        </Reference>
-        <Reference Include="Mono.Cecil.Pdb, Version=0.10.3.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e">
-          <HintPath>..\..\..\packages\Mono.Cecil.0.10.3\lib\net40\Mono.Cecil.Pdb.dll</HintPath>
-          <Private>True</Private>
-        </Reference>
-        <Reference Include="Mono.Cecil.Rocks, Version=0.10.3.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e">
-          <HintPath>..\..\..\packages\Mono.Cecil.0.10.3\lib\net40\Mono.Cecil.Rocks.dll</HintPath>
-          <Private>True</Private>
-        </Reference>
-        <Reference Include="MonoMod, Version=19.4.1.3, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\..\packages\MonoMod.19.4.1.3\lib\net35\MonoMod.exe</HintPath>
-          <Private>True</Private>
-        </Reference>
-        <Reference Include="MonoMod.RuntimeDetour, Version=19.4.1.3, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\..\packages\MonoMod.RuntimeDetour.19.4.1.3\lib\net35\MonoMod.RuntimeDetour.dll</HintPath>
-          <Private>True</Private>
-        </Reference>
-        <Reference Include="MonoMod.RuntimeDetour.HookGen, Version=19.4.1.3, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\..\packages\MonoMod.RuntimeDetour.HookGen.19.4.1.3\lib\net35\MonoMod.RuntimeDetour.HookGen.exe</HintPath>
-          <Private>True</Private>
-        </Reference>
-        <Reference Include="MonoMod.Utils, Version=19.4.1.3, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\..\packages\MonoMod.Utils.19.4.1.3\lib\net35\MonoMod.Utils.dll</HintPath>
-          <Private>True</Private>
-        </Reference>
-        <Reference Include="System" />
-        <Reference Include="System.Core" />
-        <Reference Include="System.Data" />
-        <Reference Include="System.IO.Compression" />
-        <Reference Include="System.IO.Compression.FileSystem" />
-        <Reference Include="System.IO.Log" />
-        <Reference Include="System.Xml" />
-        <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\..\..\RoR2DLLs\UnityEngine.CoreModule.dll</HintPath>
-        </Reference>
-    </ItemGroup>
-    <ItemGroup>
         <Compile Include="patch_RoR2Application.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include=".gitignore" />
-      <None Include="packages.config" />
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\..\TridevLoader\TridevLoader\TridevLoader.csproj">
-        <Project>{21a58560-a027-41aa-9ec4-65bf71a460bd}</Project>
-        <Name>TridevLoader</Name>
-      </ProjectReference>
       <ProjectReference Include="..\TridevLoader\TridevLoader.csproj">
         <Project>{21a58560-a027-41aa-9ec4-65bf71a460bd}</Project>
         <Name>TridevLoader</Name>
       </ProjectReference>
+    </ItemGroup>
+    <ItemGroup>
+      <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\Assembly-CSharp.dll</HintPath>
+      </Reference>
+      <Reference Include="Facepunch.Steamworks, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\Facepunch.Steamworks.dll</HintPath>
+      </Reference>
+      <Reference Include="KdTreeLib, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\KdTreeLib.dll</HintPath>
+      </Reference>
+      <Reference Include="Mono.Cecil, Version=0.10.3.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e">
+        <HintPath>..\MonoMod\Mono.Cecil.dll</HintPath>
+      </Reference>
+      <Reference Include="Mono.Cecil.Mdb, Version=0.10.3.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e">
+        <HintPath>..\MonoMod\Mono.Cecil.Mdb.dll</HintPath>
+      </Reference>
+      <Reference Include="Mono.Cecil.Pdb, Version=0.10.3.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e">
+        <HintPath>..\MonoMod\Mono.Cecil.Pdb.dll</HintPath>
+      </Reference>
+      <Reference Include="Mono.Cecil.Rocks, Version=0.10.3.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e">
+        <HintPath>..\MonoMod\Mono.Cecil.Rocks.dll</HintPath>
+      </Reference>
+      <Reference Include="Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+        <HintPath>..\GameDLLs\Vanilla\Mono.Security.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoMod, Version=19.4.1.3, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\MonoMod\MonoMod.exe</HintPath>
+      </Reference>
+      <Reference Include="MonoMod.RuntimeDetour, Version=19.4.1.3, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\MonoMod\MonoMod.RuntimeDetour.dll</HintPath>
+      </Reference>
+      <Reference Include="MonoMod.RuntimeDetour.HookGen, Version=19.4.1.3, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\MonoMod\MonoMod.RuntimeDetour.HookGen.exe</HintPath>
+      </Reference>
+      <Reference Include="MonoMod.Utils, Version=19.4.1.3, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\MonoMod\MonoMod.Utils.dll</HintPath>
+      </Reference>
+      <Reference Include="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <HintPath>..\GameDLLs\Vanilla\mscorlib.dll</HintPath>
+      </Reference>
+      <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+        <HintPath>..\GameDLLs\Vanilla\netstandard.dll</HintPath>
+      </Reference>
+      <Reference Include="pb_Stl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\pb_Stl.dll</HintPath>
+      </Reference>
+      <Reference Include="Poly2Tri, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\Poly2Tri.dll</HintPath>
+      </Reference>
+      <Reference Include="ProBuilderCore, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\ProBuilderCore.dll</HintPath>
+      </Reference>
+      <Reference Include="ProBuilderMeshOps, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\ProBuilderMeshOps.dll</HintPath>
+      </Reference>
+      <Reference Include="Rewired_Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\Rewired_Core.dll</HintPath>
+      </Reference>
+      <Reference Include="Rewired_CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\Rewired_CSharp.dll</HintPath>
+      </Reference>
+      <Reference Include="Rewired_Windows_Lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\Rewired_Windows_Lib.dll</HintPath>
+      </Reference>
+      <Reference Include="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+        <HintPath>..\GameDLLs\Vanilla\System.dll</HintPath>
+      </Reference>
+      <Reference Include="System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <HintPath>..\GameDLLs\Vanilla\System.ComponentModel.Composition.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\GameDLLs\Vanilla\System.Configuration.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <HintPath>..\GameDLLs\Vanilla\System.Data.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Diagnostics.StackTrace, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\GameDLLs\Vanilla\System.Diagnostics.StackTrace.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\GameDLLs\Vanilla\System.Drawing.dll</HintPath>
+      </Reference>
+      <Reference Include="System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\GameDLLs\Vanilla\System.EnterpriseServices.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Globalization.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\GameDLLs\Vanilla\System.Globalization.Extensions.dll</HintPath>
+      </Reference>
+      <Reference Include="System.IO.Compression, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <HintPath>..\GameDLLs\Vanilla\System.IO.Compression.dll</HintPath>
+      </Reference>
+      <Reference Include="System.IO.Compression.FileSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <HintPath>..\GameDLLs\Vanilla\System.IO.Compression.FileSystem.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\GameDLLs\Vanilla\System.Net.Http.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <HintPath>..\GameDLLs\Vanilla\System.Numerics.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+        <HintPath>..\GameDLLs\Vanilla\System.Runtime.Serialization.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Runtime.Serialization.Xml, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\GameDLLs\Vanilla\System.Runtime.Serialization.Xml.dll</HintPath>
+      </Reference>
+      <Reference Include="System.ServiceModel.Internals, Version=0.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+        <HintPath>..\GameDLLs\Vanilla\System.ServiceModel.Internals.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <HintPath>..\GameDLLs\Vanilla\System.Transactions.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+        <HintPath>..\GameDLLs\Vanilla\System.Xml.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+        <HintPath>..\GameDLLs\Vanilla\System.Xml.Linq.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Xml.XPath.XDocument, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <HintPath>..\GameDLLs\Vanilla\System.Xml.XPath.XDocument.dll</HintPath>
+      </Reference>
+      <Reference Include="TextMeshPro-1.0.55.2017.1.0b11, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\TextMeshPro-1.0.55.2017.1.0b11.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Postprocessing.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\Unity.Postprocessing.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.RenderPipelines.Core.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AccessibilityModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.AccessibilityModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.AIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.AnimationModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ARModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.ARModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AssetBundleModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.AssetBundleModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.AudioModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.BaselibModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.BaselibModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ClothModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.ClothModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ClusterInputModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.ClusterInputModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ClusterRendererModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.ClusterRendererModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.CoreModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.CrashReportingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.CrashReportingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.DirectorModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.DirectorModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.FileSystemHttpModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.FileSystemHttpModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.GameCenterModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.GameCenterModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.GridModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.GridModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.HotReloadModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.HotReloadModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.ImageConversionModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.IMGUIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.InputModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.InputModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.JSONSerializeModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.JSONSerializeModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.LocalizationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.LocalizationModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.Networking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.Networking.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.ParticleSystemModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.PerformanceReportingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.PerformanceReportingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.Physics2DModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.Physics2DModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.PhysicsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ProfilerModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.ProfilerModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ScreenCaptureModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.ScreenCaptureModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SharedInternalsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.SharedInternalsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SpatialTracking, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.SpatialTracking.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SpriteMaskModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.SpriteMaskModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SpriteShapeModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.SpriteShapeModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.StreamingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.StreamingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.StyleSheetsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.StyleSheetsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SubstanceModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.SubstanceModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TerrainModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.TerrainModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TerrainPhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TextCoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.TextCoreModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.TextRenderingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TilemapModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.TilemapModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.Timeline, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.Timeline.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TimelineModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.TimelineModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TLSModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.TLSModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.UI.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UIElementsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.UIElementsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.UIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UmbraModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.UmbraModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UNETModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.UNETModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityAnalyticsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityConnectModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.UnityConnectModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityTestProtocolModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestAudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestTextureModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestWWWModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VehiclesModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.VehiclesModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VFXModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.VFXModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VideoModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.VideoModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VRModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.VRModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.WindModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.WindModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.XRModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\UnityEngine.XRModule.dll</HintPath>
+      </Reference>
+      <Reference Include="Wwise, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\Wwise.dll</HintPath>
+      </Reference>
+      <Reference Include="YamlDotNet, Version=5.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\MonoMod\YamlDotNet.dll</HintPath>
+      </Reference>
+      <Reference Include="Zio, Version=0.7.3.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\GameDLLs\Vanilla\Zio.dll</HintPath>
+      </Reference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
